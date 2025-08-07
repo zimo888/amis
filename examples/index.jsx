@@ -2,6 +2,21 @@
  * @file entry of this example.
  * @author liaoxuezhi@cloud.com
  */
+
+{/*
+  <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.css" />
+  <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/v4-shims.css" />
+  <link rel="stylesheet" href="prismjs/themes/prism.css" />
+  <!--DEPENDENCIES_INJECT_PLACEHOLDER-->
+  <link rel="stylesheet" href="../node_modules/github-markdown-css/github-markdown-light.css" />
+  <link rel="stylesheet" href="./doc.css" />
+
+  <link rel="stylesheet" href="./style.scss" /> */}
+import './static/iconfont.css'
+import './static/officefont.css'
+import './doc.css'
+import './style.scss'
+import './mod.js'
 import './polyfills/index';
 import React, {useEffect} from 'react';
 
@@ -26,7 +41,5 @@ function AppWithCallbackAfterRender() {
   return <App />;
 }
 
-export function bootstrap(mountTo, initalState) {
-  const root = createRoot(mountTo);
-  root.render(<AppWithCallbackAfterRender />);
-}
+const root = createRoot(document.getElementById('root'));
+root.render(<AppWithCallbackAfterRender />);

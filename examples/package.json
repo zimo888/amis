@@ -1,0 +1,19 @@
+{
+  "name": "amis-example",
+  "version": "1.0.0",
+  "description": "An example project using AMIS",
+  "scripts": {
+    "dev": "rsbuild --config rsbuild.config.mjs"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.4.6",
+    "@rsbuild/plugin-less": "^1.2.5",
+    "@rsbuild/plugin-node-polyfill": "^1.3.1",
+    "@rsbuild/plugin-sass": "^1.3.3",
+    "@rsbuild/plugin-svgr": "^1.2.1",
+    "@rsbuild/plugin-mdx":"^1.0.3"
+  }
+}

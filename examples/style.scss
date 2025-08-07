@@ -1,8 +1,8 @@
 @use 'sass:color';
-@import 'node_modules/amis-ui/scss/mixins';
-@import 'node_modules/amis-ui/scss/functions';
-@import 'node_modules/amis-ui/scss/variables';
-
+@import 'amis-ui/scss/mixins';
+@import 'amis-ui/scss/functions';
+@import 'amis-ui/scss/variables';
+@import 'amis-ui/scss/themes/cxd.scss';
 body {
   background-color: #fff !important;
   &.dark {
