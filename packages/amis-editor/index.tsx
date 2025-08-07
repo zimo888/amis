@@ -3,10 +3,14 @@
  * @author fex
  */
 import React from 'react';
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 
-import {Layout, AsideNav, Spinner, NotFound} from 'amis-ui';
-import {eachTree, TreeArray, TreeItem} from 'amis-core';
+import { Layout, AsideNav, Spinner, NotFound } from 'amis-ui';
+import { eachTree, TreeArray, TreeItem } from 'amis-core';
+import '../amis-ui/scss/themes/cxd.scss'
+import '../amis-ui/scss/helper.scss'
+import './examples/style.scss'
+import '../amis-editor-core/scss/editor.scss';
 import {
   HashRouter as Router,
   Route,
@@ -17,9 +21,9 @@ import {
 } from 'react-router-dom';
 import Doc from './examples/component/Doc';
 
-function MDComponent(fN: () => Promise<{default: {raw: string}}>) {
+function MDComponent(fN: () => Promise<{ default: { raw: string } }>) {
   return React.lazy(() =>
-    fN().then(ret => ({default: () => <Doc children={ret.default.raw} />}))
+    fN().then(ret => ({ default: () => <Doc children={ret.default.raw} /> }))
   );
 }
 
@@ -92,9 +96,9 @@ export function Main() {
           ...item,
           children: item.children
             ? item.children.map((item: any) => ({
-                ...item,
-                className: 'is-top'
-              }))
+              ...item,
+              className: 'is-top'
+            }))
             : []
         }))}
         renderLink={({
@@ -202,7 +206,5 @@ export function Main() {
   );
 }
 
-export function bootstrap(mountTo: HTMLElement, initalState: any) {
-  const root = createRoot(mountTo);
-  root.render(<Main />);
-}
+const root = createRoot(document.getElementById('root'));
+root.render(<Main />);

@@ -1,5 +1,6 @@
 {
   "name": "aisuda",
+  "private": true,
   "workspaces": [
     "packages/amis-formula",
     "packages/amis-core",
@@ -9,7 +10,11 @@
     "packages/amis-editor",
     "packages/amis-theme-editor-helper"
   ],
+  "resolutions": {
+    "mpegts.js":"1.6.0"
+  },
   "scripts": {
+    "editor:dev": "lerna exec --scope amis-editor -- yarn dev",
     "fis3-serve": "fis3 server start --www ./public --port 8888 --no-daemon --no-browse",
     "fis3": "concurrently --restart-tries -1 npm:fis3-serve npm:fis3-dev",
     "fis3-stop": "fis3 server stop",

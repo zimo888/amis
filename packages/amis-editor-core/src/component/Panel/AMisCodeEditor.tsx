@@ -13,6 +13,7 @@ import isArray from 'lodash/isArray';
 import findIndex from 'lodash/findIndex';
 import {parse, stringify} from 'json-ast-comments';
 import isPlainObject from 'lodash/isPlainObject';
+import e from 'express';
 
 const internalSchema = /^\/schemas\/(.*).json$/;
 

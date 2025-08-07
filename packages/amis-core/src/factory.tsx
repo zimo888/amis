@@ -258,7 +258,7 @@ export function registerRenderer(config: RendererConfig): RendererConfig {
     !exists.origin &&
     !config.override
   ) {
-    throw new Error(
+    console.warn(
       `The renderer with type "${config.type}" has already exists, please try another type!`
     );
   } else if (exists) {
